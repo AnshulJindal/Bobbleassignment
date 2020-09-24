@@ -70,7 +70,7 @@ class SignupForm extends React.Component {
               buttonText="Sign up with Google"
               onSuccess={this.responseGoogle}
               onFailure={this.responseGoogle}
-              redirectUri="http://localhost:3000"
+              redirecturi="https://master.di6guhu8qtisg.amplifyapp.com"
             />
             <FacebookLogin
               appId="848013662672907"

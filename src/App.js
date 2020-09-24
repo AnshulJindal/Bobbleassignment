@@ -7,6 +7,13 @@ import { Form, Button, Row, Col, Container } from "reactstrap";
 class SignupForm extends React.Component {
   state = { email: "", password: "" };
   handleSubmit = async (e) => {
+    if(this.state.email=== '')
+      alert('Email is Missing');
+    else if(this.state.password==='')
+      alert('Password is missing');
+    else if(!(new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(this.state.email)))
+      alert("Email entered is not valid");
+      else {
     e.preventDefault();
     try {
       const response = await axios.post("https://reqres.in/api/register", {
@@ -16,8 +23,9 @@ class SignupForm extends React.Component {
       console.log(response);
       alert("Signup Successful");
     } catch (error) {
-      alert("Missing password");
+      alert("Invalid Credentials");
     }
+  }
   };
   handleEmailChange = (e) => {
     this.setState({ email: e.currentTarget.value });

@@ -1,3 +1,20 @@
+Firstly clone the repository
+using command:- git clone https://github.com/AnshulJindal/Bobbleassignment.git
+then install node modules inside the Bobbleassignment folder using below command:-
+npm install
+then run the react app using command:- npm start
+Hurray your Application will running.
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
